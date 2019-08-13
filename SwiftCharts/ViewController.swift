@@ -37,12 +37,14 @@ class ViewController: UIViewController {
         pieChart.highlightPerTapEnabled = false
         
         // auto spin
-        pieChart.spin(duration: 0.38, fromAngle: 0, toAngle: 720)
+        pieChart.spin(duration: 0.38, fromAngle: 0, toAngle: 180)
         
         // user cannot spin
         pieChart.isUserInteractionEnabled = false
     
         pieChart.chartDescription?.text = ""
+        
+        pieChart.maxAngle = 360
     
         // ------
         xData.value = 130
