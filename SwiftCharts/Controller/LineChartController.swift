@@ -33,7 +33,7 @@ class LineChartController: UIViewController {
         numbers.append(13.5)
         numbers.append(27.0)
         numbers.append(19.5)
-        numbers.append(28.0)
+        numbers.append(21.0)
         numbers.append(32.0)
         
         numbers2.append(9.5)
@@ -64,10 +64,10 @@ class LineChartController: UIViewController {
         // ----------------------------------------------
         
         let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number") //Here we convert lineChartEntry to a LineChartDataSet
-        line1.colors = [NSUIColor.blue] //Sets the colour to blue
+        line1.colors = [NSUIColor.green]
         
         let line2 = LineChartDataSet(entries: line2ChartEntry, label: "Number2") //Here we convert lineChartEntry to a LineChartDataSet
-        line1.colors = [NSUIColor.orange] //Sets the colour to blue
+        line2.colors = [NSUIColor.orange]
         
         // ----------
         
