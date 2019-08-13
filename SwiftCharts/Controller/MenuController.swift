@@ -10,7 +10,7 @@ import UIKit
 
 class MenuController: UITableViewController {
 
-    
+    // MAREK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +21,8 @@ class MenuController: UITableViewController {
         print("index path row: \(indexPath.row)")
         if indexPath.row == 0 {
             performSegue(withIdentifier: "showPieChart", sender: self)
+        }else if indexPath.row == 1 {
+            performSegue(withIdentifier: "showLineChart", sender: self)
         }
     }
 

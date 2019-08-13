@@ -13,6 +13,7 @@
 		7F7CF70D23032B49003CD974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CF70C23032B49003CD974 /* Assets.xcassets */; };
 		7F7CF71023032B49003CD974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CF70E23032B49003CD974 /* LaunchScreen.storyboard */; };
 		7F7CF719230342A3003CD974 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CF718230342A3003CD974 /* MenuController.swift */; };
+		7F9FB8E5230347EB0027D91A /* LineChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9FB8E4230347EB0027D91A /* LineChartController.swift */; };
 		8A930B00DEC28BCB758FE07C /* Pods_SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410362421B25C377E88AC481 /* Pods_SwiftCharts.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		7F7CF70F23032B49003CD974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F7CF71123032B49003CD974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F7CF718230342A3003CD974 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		7F9FB8E4230347EB0027D91A /* LineChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartController.swift; sourceTree = "<group>"; };
 		85EEC0EFFA16CDB82F15CBC0 /* Pods-SwiftCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCharts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCharts/Pods-SwiftCharts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			children = (
 				7F7CF70723032B47003CD974 /* PieChartController.swift */,
 				7F7CF718230342A3003CD974 /* MenuController.swift */,
+				7F9FB8E4230347EB0027D91A /* LineChartController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				7F7CF70823032B47003CD974 /* PieChartController.swift in Sources */,
 				7F7CF719230342A3003CD974 /* MenuController.swift in Sources */,
+				7F9FB8E5230347EB0027D91A /* LineChartController.swift in Sources */,
 				7F7CF70623032B47003CD974 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

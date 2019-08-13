@@ -21,7 +21,7 @@
                         <sections>
                             <tableViewSection id="Mqe-WS-qsD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7a3-LT-Xkh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7a3-LT-Xkh" userLabel="Pie Chart Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7a3-LT-Xkh" id="dQS-Pl-FIk">
@@ -43,6 +43,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ghp-Jr-F2Y" userLabel="Line Chart Cell">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghp-Jr-F2Y" id="kht-w9-ixx">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw9-L2-fLo">
+                                                    <rect key="frame" x="20" y="11" width="348" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jw9-L2-fLo" firstAttribute="leading" secondItem="kht-w9-ixx" secondAttribute="leadingMargin" id="EOK-sL-Rox"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jw9-L2-fLo" secondAttribute="bottom" constant="1" id="LHc-xk-Sxl"/>
+                                                <constraint firstItem="jw9-L2-fLo" firstAttribute="top" secondItem="kht-w9-ixx" secondAttribute="topMargin" id="RpT-OF-pTq"/>
+                                                <constraint firstItem="jw9-L2-fLo" firstAttribute="trailing" secondItem="kht-w9-ixx" secondAttribute="trailingMargin" id="cPc-Uy-cdO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -54,11 +76,45 @@
                     <navigationItem key="navigationItem" id="MgU-ia-fxD"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showPieChart" id="aJw-98-HBy"/>
+                        <segue destination="D6N-cD-OZX" kind="show" identifier="showLineChart" id="9c5-g8-ViJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ce-3f-Eaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391.304347826087" y="175.44642857142856"/>
+        </scene>
+        <!--Line Chart Controller-->
+        <scene sceneID="T2m-c9-Bg4">
+            <objects>
+                <viewController id="D6N-cD-OZX" customClass="LineChartController" customModule="SwiftCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ky9-kM-Gvn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdt-43-sbJ" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="57" y="88" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1fm-1o-u4Z"/>
+                                    <constraint firstAttribute="width" constant="300" id="WZ4-1J-fHs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jdt-43-sbJ" firstAttribute="top" secondItem="YB2-dx-Osv" secondAttribute="top" id="8bX-sP-mml"/>
+                            <constraint firstItem="Jdt-43-sbJ" firstAttribute="leading" secondItem="YB2-dx-Osv" secondAttribute="leading" constant="57" id="Txe-tQ-9XV"/>
+                            <constraint firstItem="YB2-dx-Osv" firstAttribute="trailing" secondItem="Jdt-43-sbJ" secondAttribute="trailing" constant="57" id="wHu-pr-yBs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YB2-dx-Osv"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineChart" destination="Jdt-43-sbJ" id="u2i-LB-dHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oa-o8-hKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="272"/>
         </scene>
         <!--Pie Chart Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -91,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="175"/>
+            <point key="canvasLocation" x="584" y="-392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="URy-xa-rVb">
