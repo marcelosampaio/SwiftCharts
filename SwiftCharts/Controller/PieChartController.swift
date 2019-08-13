@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PieChartController.swift
 //  SwiftCharts
 //
 //  Created by Marcelo Sampaio on 13/08/19.
@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class ViewController: UIViewController {
+class PieChartController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var pieChart: PieChartView!
